@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "advent-of-code-2023"
+version = "0.1.0"
+description = "Advent of Code 2023"
+authors = ["Romain Bosa"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+solve = "advent_of_code_2023.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+ruff = "^0.1.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
