@@ -1,8 +1,12 @@
-# Advent of Code 2023
+# Advent of Code 2022 in Python
+
+My Python solutions to [Advent of Code](https://adventofcode.com/) 2023.
+
+## Usage
 
 ```
 poetry install
-poetry run solve -d DAY [-a]
+poetry run solve --day/-d DAY [--hard/-a]
 ```
 
 Inputs should be placed in `inputs/` and named `day_XX`.

@@ -1,5 +1,6 @@
-import importlib
-import sys
+from importlib import import_module
+from os.path import exists
+from sys import exit
 
 import click
 
@@ -9,8 +10,12 @@ import click
 @click.option("--hard", "-a", is_flag=True)
 def cli(day: int, hard: bool):
     try:
-        module = importlib.import_module(f"advent_of_code_2023.day_{day:02}")
+        module = import_module(f"advent_of_code_2023.day_{day:02}")
     except ModuleNotFoundError:
-        print("Solution not available.")
-        sys.exit(1)
-    print(module.run(filename=f"inputs/day_{day:02}", hard=hard))
+        print("Solution not available")
+        exit(1)
+    filename = f"inputs/day_{day:02}"
+    if not exists(filename):
+        print(f"Missing {filename}")
+        exit(1)
+    print(module.run(filename, hard))
