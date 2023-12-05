@@ -1,4 +1,4 @@
-# Advent of Code 2022 in Python
+# Advent of Code 2023 in Python
 
 My Python solutions to [Advent of Code](https://adventofcode.com/) 2023.
 
