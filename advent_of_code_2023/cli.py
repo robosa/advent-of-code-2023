@@ -1,6 +1,7 @@
 from importlib import import_module
 from os.path import exists
 from sys import exit
+from time import perf_counter
 
 import click
 
@@ -18,4 +19,8 @@ def cli(day: int, hard: bool):
     if not exists(filename):
         print(f"Missing {filename}")
         exit(1)
-    print(module.run(filename, hard))
+    start = perf_counter()
+    res = module.run(filename, hard)
+    stop = perf_counter()
+    print(f"Time: {stop - start:0.4f}s")
+    print(res)
