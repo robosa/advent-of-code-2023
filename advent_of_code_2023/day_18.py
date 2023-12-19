@@ -12,7 +12,7 @@ class Grid:
         self._set_grid_dims()
 
     def _set_grid_dims(self) -> None:
-        i, j = (0, 0)
+        i, j = 0, 0
         i_set = set()
         j_set = set()
         for d, dist in self.instructions:
@@ -20,7 +20,7 @@ class Grid:
             i, j = i + dist * di, j + dist * dj
             i_set.add(i)
             j_set.add(j)
-        start_i, start_j = (0, 0)
+        start_i, start_j = 0, 0
         self.heights = [1]
         for i1, i2 in pairwise(sorted(i_set)):
             self.heights.append(i2 - i1 - 1)
