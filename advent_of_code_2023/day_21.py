@@ -4,7 +4,7 @@ DIRECTIONS = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
 
 def run(filename: str, hard: bool) -> int:
-    with open(filename) as file:
+    with open(filename, "r") as file:
         grid = [line.rstrip() for line in file]
     n = len(grid)
     max_steps = 2 * n + n // 2

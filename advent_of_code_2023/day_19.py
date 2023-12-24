@@ -52,7 +52,7 @@ class Rule:
 
 
 def run(filename: str, hard: bool) -> int:
-    with open(filename) as file:
+    with open(filename, "r") as file:
         input, parts = file.read().split("\n\n")
     workflows = parse_workflows(input.split())
     return part_two(workflows) if hard else part_one(workflows, parts)

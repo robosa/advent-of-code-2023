@@ -74,7 +74,7 @@ def run(filename: str, hard: bool) -> int:
 
 def get_instructions(filename: str, hard: bool) -> list[tuple[int, int]]:
     instructions = []
-    with open(filename) as file:
+    with open(filename, "r") as file:
         for line in file:
             d, dist, hexa = line.split()
             if hard:

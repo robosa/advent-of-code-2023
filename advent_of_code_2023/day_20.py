@@ -55,7 +55,7 @@ def run(filename: str, hard: bool) -> int:
 def parse_modules(filename: str) -> tuple[dict[str, Module], set[str]]:
     modules = defaultdict(Module)
     last = None
-    with open(filename) as file:
+    with open(filename, "r") as file:
         for line in file:
             name, outputs = line.rstrip().split(" -> ")
             type = name[0]

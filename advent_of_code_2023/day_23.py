@@ -6,7 +6,7 @@ SLOPES = [">", "v", "<", "^"]
 
 class Grid:
     def __init__(self, filename: str) -> None:
-        with open(filename) as file:
+        with open(filename, "r") as file:
             self.grid = [line.rstrip() for line in file]
         n = len(self.grid)
         self.end = (n - 1, n - 2)

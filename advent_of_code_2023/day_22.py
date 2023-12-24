@@ -24,7 +24,7 @@ def run(filename: str, hard: bool) -> int:
 
 
 def stack_bricks(filename: str) -> tuple[int, dict[int, set[int]], dict[int, set[int]]]:
-    with open(filename) as file:
+    with open(filename, "r") as file:
         pieces = []
         for line in file:
             first, second = line.rstrip().split("~")
