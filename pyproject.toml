@@ -12,6 +12,7 @@ solve = "advent_of_code_2023.cli:cli"
 python = "^3.10"
 click = "^8.1.7"
 numpy = "^1.26.2"
+networkx = "^3.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
